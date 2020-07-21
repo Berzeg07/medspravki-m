@@ -1,4 +1,5 @@
 .header-desctop {
+    box-shadow: 0px 4px 5px rgba(26, 21, 86, 0.14);
     @media(max-width: 1279px) {
         display: none;
     }
@@ -46,7 +47,8 @@
     margin-bottom: 3px;
 }
 
-.logo__txt {
+.logo__txt,
+.logo-mob__txt {
     background: #1AAC9F;
     border-radius: 0px 4px 4px 0px;
     text-transform: uppercase;
@@ -238,10 +240,10 @@
         width: 20%;
         text-align: center;
     }
-    .phone-link {
+    .phone-link_desc {
         font-size: 28px;
     }
-    .phone-block__article {
+    .phone-block__article_desc {
         font-size: 12px;
     }
     .header__info {
@@ -332,4 +334,45 @@
             background-size: contain;
         }
     }
+}
+
+.header-mobile {
+    @media(min-width: 1280px) {
+        display: none;
+    }
+}
+
+.header-mobile__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 21px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(26, 21, 86, 0.14);
+    position: relative;
+    z-index: 10;
+}
+
+.burger {
+    width: 24px;
+    height: 24px;
+    background: url('../img/burger.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.burger.is-active {
+    background: url('../img/close-icon.png') no-repeat center;
+}
+
+.phone-icon {
+    width: 18px;
+    height: 18px;
+    background: url('../img/phone-icon.png') no-repeat center;
+}
+
+.logo-mob {
+    display: flex;
+    justify-content: center;
+    background: #1AAC9F;
 }
