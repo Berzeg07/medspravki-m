@@ -257,7 +257,7 @@
             }
         }
     }
-    .work-time {
+    .work-time_desc {
         padding-left: 0;
         li {
             font-size: 11px;
@@ -375,4 +375,240 @@
     display: flex;
     justify-content: center;
     background: #1AAC9F;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: -100%;
+    top: 120px;
+    background: #41ACDD;
+    padding: 24px 0px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    transition: 0.5s;
+}
+
+.dropdown-menu.is-active {
+    left: 0;
+}
+
+.dropdown-menu__list-top {
+    padding: 0 42px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+        width: 50%;
+        margin-bottom: 16px;
+    }
+}
+
+.mob-nav {
+    margin-bottom: 30px;
+    a,
+    p {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url('../img/menu-icon-w.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url('../img/arrow-down-w.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+.mob-nav>li {
+    padding: 14px 27px;
+    cursor: pointer;
+}
+
+.mob-nav>li.is-active {
+    background: #369FCF;
+}
+
+.mob-nav__dropdown {
+    padding-top: 24px;
+    display: none;
+    a {
+        font-size: 15px;
+    }
+}
+
+.mob-nav__dropdown {
+    li {
+        margin-bottom: 11px;
+    }
+}
+
+.phone-block_mob {
+    padding-left: 40px;
+    margin-bottom: 16px;
+}
+
+.phone-link_mob,
+.phone-block__article_mob {
+    color: white;
+}
+
+.work-time_mob {
+    margin-right: 0;
+    margin-left: 40px;
+    &:after {
+        background: url('../img/clock-white.png') no-repeat center;
+    }
+    li {
+        color: white;
+    }
+}
+
+.footer {
+    padding: 41px 60px;
+    background: #EBF8FF url('../img/wave.png') no-repeat bottom right;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+
+.footer__title {
+    color: #4A647A;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 29px;
+}
+
+.footer-nav {
+    a {
+        font-size: 18px;
+        color: #4A647A;
+        &:hover {
+            color: #27A2DB;
+            border-bottom: 1px dashed #27A2DB;
+        }
+    }
+    li {
+        margin-bottom: 15px;
+    }
+}
+
+.logo__footer {
+    margin-bottom: 26px;
+}
+
+.phone-block__footer {
+    margin-bottom: 16px;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #A1A4A7;
+    font-size: 14px;
+}
+
+@media(max-width: 767px) {
+    .footer__top {
+        display: block;
+        margin-bottom: 50px;
+    }
+    .footer__top>li {
+        margin-bottom: 43px;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 41px 35px;
+    }
+    .footer__bottom {
+        li {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1599px) {
+    .footer {
+        padding: 41px 20px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1279px) {
+    .footer__top>li {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 1279px) {
+    .logo__footer {
+        display: none;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1599px) {
+    .footer__top>li {
+        width: 20%;
+        &:last-child {
+            width: 12%;
+        }
+        &:first-child {
+            width: 21%;
+        }
+    }
+    .phone-link_footer {
+        font-size: 28px;
+    }
+}
+
+.logo__footer {
+    @media(min-width: 1280px) {
+        width: 100%;
+        .logo__txt {
+            left: -12px;
+        }
+    }
+    @media(min-width: 1280px) and (max-width: 1599px) {
+        .logo__slogan {
+            margin-bottom: 11px;
+        }
+    }
+    .logo__img {
+        @media(min-width: 1280px) {
+            display: block;
+        }
+    }
 }
