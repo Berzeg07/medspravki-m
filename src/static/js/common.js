@@ -13,6 +13,20 @@ $(document).ready(function() {
 
     });
 
+    $(".table-show").click(function() {
+        var $this = $(this);
+        // var elem = $(this).find('.mob-nav__dropdown');
+
+        if (!$this.hasClass("is-active")) {
+            $(".table-wrap").slideUp();
+            $(".table-show").removeClass("is-active");
+        }
+
+        $this.toggleClass("is-active");
+        $this.next().slideToggle();
+
+    });
+
     $(".burger").click(function() {
         $(this).toggleClass('is-active');
         $('.dropdown-menu').toggleClass('is-active');
