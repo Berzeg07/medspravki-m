@@ -46,6 +46,83 @@ $(document).ready(function() {
         }
     });
 
+    var myAdvSlider = undefined;
+
+    function initSwiper() {
+        var screenWidth = $(window).width();
+        if (screenWidth > 991 && myAdvSlider == undefined) {
+            var advSlider = new Swiper('.advantag-slider', {
+                slidesPerView: 4,
+                spaceBetween: 38,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                breakpoints: {
+
+                    1279: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1599: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                }
+            });
+        } else if (screenWidth < 992 && myAdvSlider != undefined) {
+            mySwiper.destroy();
+            mySwiper = undefined;
+        }
+    }
+
+    //Swiper plugin initialization
+    initSwiper();
+
+    //Swiper plugin initialization on window resize
+    $(window).on('resize', function() {
+        initSwiper();
+    });
+
+    var catSlider = new Swiper('.cat-slider', {
+        slidesPerView: 6,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-nc',
+            prevEl: '.swiper-button-prev-pc',
+        },
+
+        breakpoints: {
+            499: {
+                slidesPerView: 1,
+
+            },
+            767: {
+                slidesPerView: 2,
+
+            },
+            991: {
+                slidesPerView: 3,
+
+            },
+            1279: {
+                slidesPerView: 4,
+
+            },
+            1599: {
+                slidesPerView: 5,
+
+            },
+        }
+    });
+
 
 
 
