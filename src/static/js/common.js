@@ -228,15 +228,15 @@ $(document).ready(function() {
         }
     }
 
+    $('.tab-btn-list .tab-btn').click(function() {
 
-
-
-
-
-
-
-
-
+        $('.tab-btn').removeClass('is-active');
+        $(this).addClass('is-active');
+        var tab = $(this).attr('data-tab');
+        $('.tab-block__item').not(tab).css({ 'display': 'none' });
+        $(tab).fadeIn(400);
+    });
+    $('.tab-btn-list .tab-btn:first').click();
 
 
 });
