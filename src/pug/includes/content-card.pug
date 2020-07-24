@@ -1,3 +1,8 @@
+.breadcrumbs
+    a(href="#") Главная
+    a(href="#") Медицинские центры
+    a Медицинский центр на Братиславской
+
 .about-us
     .container.about-us__container
         ul.about-us__top
@@ -7,90 +12,68 @@
                         img(src="img/orel.png")
                     .gerb__article Лицензия департамента<br> здравоохранения города Москвы
             li
-                h1.main-title.about-us__title Медицинские книжки и справки в Москве
+                h1.main-title.about-us__title Медицинский центр на ул. Братиславская, 33
             li
                 .about-tooltip
                     p Мы не продаем справки. Для получения справки нужно обязательно пройти медосмотр.
     .container.about-us__text
         .main-txt
-            p Сеть медицинских центров, в которых Вы можете оформить официальные медицинские документы (медкнижки, справки для работы или учебы, справки в ГИБДД, ФМС и др.). К нам обращаются, чтобы сэкономить время на очередях и получить заключение максимально быстро. Все наши филиалы в Москве и Московской области имеют необходимые государственные лицензии. Документы, которые выдают в клиниках, на 100% соответствуют требованиям законодательства РФ.
+            p У нас вы можете быстро, без очередей пройти обследование для оформления медицинских документов. Мы выдаем медкнижки, а также справки для самых разных потребностей: для работы, для получения прав, вида на жительство, для посещения бассейна и др. Каждый наш медцентр обладает необходимыми лицензиями, справки оформляем официально, в соответствии с последними указаниями Минздрава.
 
-.filials
-    .filials__top.container
-        h2.main-title
-            span 20 филиалов 
-            |в Москве и Московской области
-        button(type="button").map-scroll-btn Медцентры на карте
-    
-    .filials-slider-wrap.container
-        .filials-slider.swiper-container
+.center-info.container
+    .column
+        .map-slider.swiper-container
             .swiper-wrapper
                 .swiper-slide
-                    .filials-slider__item
-                        .filials-slider__img
-                            img(src="img/slide-1.jpg")
-                        
-                        ul.filials-slider__cont
-                            li
-                                a(href="#").filials-slider__link Медсправки на Бульваре Рокоссовского
-                            li
-                                .filials-slider__adress Москва, ул. Ивантеевская
-                            li
-                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
-                            li
-                                .filials-slider__metro.red Бульвар Рокоссовского
-                                .filials-slider__distance 300 м
-
+                    img(src="img/map-sl.jpg")
                 .swiper-slide
-                    .filials-slider__item
-                        .filials-slider__img
-                            img(src="img/slide-2.jpg")
-                        
-                        ul.filials-slider__cont
-                            li
-                                a(href="#").filials-slider__link Медсправки на Братиславской
-                            li
-                                .filials-slider__adress Москва, ул. Братиславская 
-                            li
-                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
-                            li
-                                .filials-slider__metro.orange Братиславская
-                                .filials-slider__distance 600 м
-
+                    img(src="img/map-sl.jpg")    
                 .swiper-slide
-                    .filials-slider__item
-                        .filials-slider__img
-                            img(src="img/slide-2.jpg")
-                        
-                        ul.filials-slider__cont
-                            li
-                                a(href="#").filials-slider__link Медсправки на Бунинской аллее
-                            li
-                                .filials-slider__adress Москва, ул. Адмирала Лазарева
-                            li
-                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
-                            li
-                                .filials-slider__metro.blue Бунинская аллея 
-                                .filials-slider__distance 500 м
-                
-                .swiper-slide
-                    .filials-slider__item
-                        .filials-slider__img
-                            img(src="img/slide-2.jpg")
-                        
-                        ul.filials-slider__cont
-                            li
-                                a(href="#").filials-slider__link Медсправки на Севастопольской
-                            li
-                                .filials-slider__adress Москва, ул. Малая Юшуньская
-                            li
-                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
-                            li
-                                .filials-slider__metro.grey Каховская/Севастопольская
-                                .filials-slider__distance 200 м
+                    img(src="img/map-sl.jpg")
+            
             .swiper-pagination
-        .swiper-button-next.swiper-button-next-n
-        .swiper-button-prev.swiper-button-prev-p
+
+    .column
+        ul.center-info__top
+            li
+                .center-info__adress
+                    span Братиславская
+                    span 200 м
+
+                ul.phone-block.phone-block_center
+                    li
+                        a(href="tel:+74957810037").phone-link.phone-link_center +7 (495) 781-00-37
+                    li  
+                        .phone-block__article.phone-block__article_center Единый номер контакт-центра
+            li
+                .center-info__street 
+                    p Москва, ул. Малая Юшуньская, 1к1
+
+                .center-info__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
+        
+        form(action="#" method="post").center-form
+            ul.center-form__list-top
+                li.column
+                    p.center-form__title Отправьте заявку - нужная справка через 30 минут!
+                    ul.center-form__top
+                        li
+                            input(type="text" placeholder="Ваше имя").inp.inp_name
+                        li
+                            input(type="text" placeholder="Ваш телефон").inp.inp_phone
+                    
+                    textarea.textfield.textfield_center(placeholder="Комментарий")
+                    
+                    ul.center-form__list
+                        li
+                            button(type="submit").submit-btn.submit-btn_center
+                                span Отправить заявку
+                        li
+                            .privacy-link.privacy-link_center Нажимая на кнопку «Отправить заявку», вы принимаете условия передачи и 
+                                a(href="#") обработки информации
+                li.column
+                    .center-form__img
+                        img(src="img/small-doctor.png")
+
 
 .advantages.container
     h2.main-title.advantages__title Наши преимущества
@@ -371,47 +354,82 @@
                     li
                         a(href="#").link-service Медицинская справка для госслужбы 001-ГС/У
 
-.map-wrap
-    h2.main-title.map-wrap__title Наши медицинские центры на карте
-    .map-main#map
-
-.form-block
-    ul.form-block__top
-        li
-            .form-block__img
-                img(src="img/doctor-white.png")
-        li
-            .form-block__title Отправьте заявку - нужная справка через 30 минут!
-            form.form(action="#" method="post")
-                .form__list
-                    .column
-                        .select-wrap.form__select
-                            select.custom-select
-                                option Справка для категорий А, А1, В, В1, М, ВЕ 
-                                option test
+.filials
+    .filials__top.container
+        h2.main-title
+            span 20 филиалов 
+            |в Москве и Московской области
+        button(type="button").map-scroll-btn Медцентры на карте
+    
+    .filials-slider-wrap.container
+        .filials-slider.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .filials-slider__item
+                        .filials-slider__img
+                            img(src="img/slide-1.jpg")
                         
-                        .select-wrap.form__select
-                            select.custom-select
-                                option Выберите медицинский центр 
-                                option test
+                        ul.filials-slider__cont
+                            li
+                                a(href="#").filials-slider__link Медсправки на Бульваре Рокоссовского
+                            li
+                                .filials-slider__adress Москва, ул. Ивантеевская
+                            li
+                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
+                            li
+                                .filials-slider__metro.red Бульвар Рокоссовского
+                                .filials-slider__distance 300 м
 
-                    .column
-                        ul.inp-list
+                .swiper-slide
+                    .filials-slider__item
+                        .filials-slider__img
+                            img(src="img/slide-2.jpg")
+                        
+                        ul.filials-slider__cont
                             li
-                                input(type="text" placeholder="Ваше имя").inp.inp_name
+                                a(href="#").filials-slider__link Медсправки на Братиславской
                             li
-                                input(type="text" placeholder="Ваш телефон").inp.inp_phone
+                                .filials-slider__adress Москва, ул. Братиславская 
+                            li
+                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
+                            li
+                                .filials-slider__metro.orange Братиславская
+                                .filials-slider__distance 600 м
 
-                        textarea.textfield(placeholder="Комментарий")
-
-                    .column
-                        ul.form__bottom-block
+                .swiper-slide
+                    .filials-slider__item
+                        .filials-slider__img
+                            img(src="img/slide-2.jpg")
+                        
+                        ul.filials-slider__cont
                             li
-                                button(type="submit").submit-btn 
-                                    span Отправить заявку
+                                a(href="#").filials-slider__link Медсправки на Бунинской аллее
                             li
-                                .privacy-link Нажимая на кнопку «Отправить заявку», вы принимаете условия передачи и 
-                                    a(href="#") обработки информации
+                                .filials-slider__adress Москва, ул. Адмирала Лазарева
+                            li
+                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
+                            li
+                                .filials-slider__metro.blue Бунинская аллея 
+                                .filials-slider__distance 500 м
+                
+                .swiper-slide
+                    .filials-slider__item
+                        .filials-slider__img
+                            img(src="img/slide-2.jpg")
+                        
+                        ul.filials-slider__cont
+                            li
+                                a(href="#").filials-slider__link Медсправки на Севастопольской
+                            li
+                                .filials-slider__adress Москва, ул. Малая Юшуньская
+                            li
+                                .filials-slider__work-time Пн-Сб: 9:00 - 20:00, Вс: 10:00 - 19:00
+                            li
+                                .filials-slider__metro.grey Каховская/Севастопольская
+                                .filials-slider__distance 200 м
+            .swiper-pagination
+        .swiper-button-next.swiper-button-next-n
+        .swiper-button-prev.swiper-button-prev-p
 
 .licence.container
     h2.main-title.licence__title Наши лицензии

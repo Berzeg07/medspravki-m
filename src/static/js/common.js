@@ -167,7 +167,67 @@ $(document).ready(function() {
         }
     });
 
+    var catSlider = new Swiper('.map-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
     $('.custom-select').selectric();
+    var checkMap = document.querySelector('#map');
+    if (checkMap) {
+        ymaps.ready(init);
+
+        function init() {
+            var center = [55.59113656911934, 37.88662649999996];
+            var center2 = [55.763240, 37.651825];
+            var myMap = new ymaps.Map('map', {
+                center: center,
+                controls: [],
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+
+            });
+
+            myMap.behaviors.disable('scrollZoom');
+
+            var myPlacemark = new ymaps.Placemark(center, {
+                // Свойства.
+                // Содержимое иконки, балуна и хинта.
+                balloonContent: 'улица Ивана Франко, 4к4',
+                hintContent: 'улица Ивана Франко, 4к4'
+            }, {
+                // Опции.
+                iconLayout: 'default#image',
+                // iconImageHref: 'img/map-ic.png',
+                // iconImageSize: [42, 42]
+                // preset: 'twirl#violetIcon'
+            });
+
+            var myPlacemark2 = new ymaps.Placemark(center2, {
+                // Свойства.
+                // Содержимое иконки, балуна и хинта.
+                balloonContent: 'улица Ивана Франко, 4к4',
+                hintContent: 'улица Ивана Франко, 4к4'
+            }, {
+                // Опции.
+                iconLayout: 'default#image',
+                // iconImageHref: 'img/map-ic.png',
+                // iconImageSize: [42, 42]
+                // preset: 'twirl#violetIcon'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+            myMap.geoObjects.add(myPlacemark2);
+
+        }
+    }
+
 
 
 
