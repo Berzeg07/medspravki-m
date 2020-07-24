@@ -137,6 +137,38 @@ $(document).ready(function() {
         }
     });
 
+    var lisenceSlider = new Swiper('.licence-slider', {
+        slidesPerView: 5,
+        spaceBetween: 120,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next-nl',
+            prevEl: '.swiper-button-prev-pl',
+        },
+
+        breakpoints: {
+            499: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+
+            },
+            1599: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            }
+        }
+    });
+
+    $('.custom-select').selectric();
+
 
 
 

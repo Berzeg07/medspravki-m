@@ -333,3 +333,103 @@
                     td 
                         .table-check
                         button(type="button").table-btn Записаться
+
+.link-block.container
+    h2.main-title.link-block__title 
+        |Все необходимые медсправки 
+        span в одном месте
+    
+    .link-block__column-wrap
+        .link-block__inner
+            .link-block__column
+                .link-block__img
+                    img(src="img/smile.jpg")
+                
+                ul.link-block__list
+                    li
+                        a(href="#").link-service Справки в ГИБДД, Для категории А, В 003в/у или 831Н
+                    li
+                        a(href="#").link-service Справки в ГИБДД, Для категории А, В + нарколог и психиатр 003в/у или 831Н
+                    li
+                        a(href="#").link-service Справки в ГИБДД, для категории С, D, E с ЭЭГ + нарколог и психиатр 003в/у или 831Н
+
+            .link-block__column
+                ul.link-block__list
+                    li
+                        a(href="#").link-service Справка для РВП, ВНЖ, для разрешения на работу для иностанных граждан (ФМС)
+                    li
+                        a(href="#").link-service Справка о профпригодности + паспорт здоровья 302Н
+                    li
+                        a(href="#").link-service Медицинская справка для госслужбы 001-ГС/У
+
+            .link-block__column
+                ul.link-block__list
+                    li
+                        a(href="#").link-service Справка для РВП, ВНЖ, для разрешения на работу для иностанных граждан (ФМС)
+                    li
+                        a(href="#").link-service Справка о профпригодности + паспорт здоровья 302Н
+                    li
+                        a(href="#").link-service Медицинская справка для госслужбы 001-ГС/У
+
+.form-block
+    
+    ul.form-block__top
+        li
+            .form-block__img
+                img(src="img/doctor-white.png")
+        li
+            .form-block__title Отправьте заявку - нужная справка через 30 минут!
+            form.form(action="#" method="post")
+                .form__list
+                    .column
+                        .select-wrap.form__select
+                            select.custom-select
+                                option Справка для категорий А, А1, В, В1, М, ВЕ 
+                                option test
+                        
+                        .select-wrap.form__select
+                            select.custom-select
+                                option Выберите медицинский центр 
+                                option test
+
+                    .column
+                        ul.inp-list
+                            li
+                                input(type="text" placeholder="Ваше имя").inp.inp_name
+                            li
+                                input(type="text" placeholder="Ваш телефон").inp.inp_phone
+
+                        textarea.textfield(placeholder="Комментарий")
+
+                    .column
+                        ul.form__bottom-block
+                            li
+                                button(type="submit").submit-btn 
+                                    span Отправить заявку
+                            li
+                                .privacy-link Нажимая на кнопку «Отправить заявку», вы принимаете условия передачи и 
+                                    a(href="#") обработки информации
+
+.licence.container
+    h2.main-title.licence__title Наши лицензии
+    .licence-slider-wrap
+        .licence-slider.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    .licence-slider__item
+                        img(src="img/cert-1.jpg")
+                .swiper-slide
+                    .licence-slider__item
+                        img(src="img/cert-2.jpg")
+                .swiper-slide
+                    .licence-slider__item
+                        img(src="img/cert-3.jpg")
+                .swiper-slide
+                    .licence-slider__item
+                        img(src="img/cert-4.jpg")
+                .swiper-slide
+                    .licence-slider__item
+                        img(src="img/cert-5.jpg")
+
+        .swiper-button-next.swiper-button-next-nl
+        .swiper-button-prev.swiper-button-prev-pl
